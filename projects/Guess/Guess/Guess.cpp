@@ -5,28 +5,29 @@
  */
 
 #include <iostream>
-#include <time.h>
+#include <random>
 
-int getRandomInteger(int min, int max)
+int random_integer(int min, int max)
 {
-    // randomInteger Å∏ [min, max]
-    srand(time(NULL));
-    return rand() % (max - min + 1) + min;
+    // random_integer Å∏ [min, max]
+    static std::default_random_engine eng{ std::random_device{}() };
+    std::uniform_int_distribution<int> dist(min, max);
+    return dist(eng);
 }
 
-void findUnknownInteger(int unknown, int min, int max, int guess)
+void find_unknown_integer(int unknown, int min, int max, int guess)
 {
     if (guess > unknown)
     {
         std::cout << "Guessed too high " << '(' << guess << ')' << '\n';
-        int newGuess{ (min + guess) / 2 };
-        findUnknownInteger(unknown, min, guess - 1, newGuess);
+        int new_guess{ (min + guess) / 2 };
+        find_unknown_integer(unknown, min, guess - 1, new_guess);
     }
     else if (guess < unknown)
     {
         std::cout << "Guessed too low " << '(' << guess << ')' << '\n';
-        int newGuess{ (guess + max) / 2 };
-        findUnknownInteger(unknown, guess + 1, max, newGuess);
+        int new_guess{ (guess + max) / 2 };
+        find_unknown_integer(unknown, guess + 1, max, new_guess);
     }
     else
     {
@@ -44,7 +45,7 @@ int main()
     std::cin >> unknown;
     
     // enter the game
-    int initialGuess = getRandomInteger(min, max);
-    findUnknownInteger(unknown, min, max, initialGuess);
+    int initial_guess = random_integer(min, max);
+    find_unknown_integer(unknown, min, max, initial_guess);
     return 0;
 }
