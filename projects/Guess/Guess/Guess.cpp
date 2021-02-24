@@ -9,7 +9,7 @@
 
 int random_integer(int min, int max)
 {
-    // random_integer ¸ [min, max]
+    // random_integer in [min, max]
     static std::default_random_engine eng{ std::random_device{}() };
     std::uniform_int_distribution<int> dist(min, max);
     return dist(eng);
