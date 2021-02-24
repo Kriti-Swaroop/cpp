@@ -13,6 +13,6 @@ beginner-friendly project ideas feel free to follow along.
 
 Find below a list of projects I added to this repository in chronology order:
 
-1. `Guess` is *Guess the Number* but the user enters a number and lets the computer
+1. **Guess** is *Guess the Number* but the user enters a number and lets the comp
 guess the number `tags = [cli, random, conditions, recursive function]`
-2. Coming soon!
+2. **ISBN10** is a project for validating ISBN-10 checksums `tag=[string manipulation, vector, conversion]`
