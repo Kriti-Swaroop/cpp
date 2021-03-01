@@ -8,5 +8,6 @@
 
 int main()
 {
-    test();
+	get_user_input<int>("Enter a number: ");
+	test();
 }
