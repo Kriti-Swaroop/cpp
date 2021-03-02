@@ -1,6 +1,7 @@
 #include <fstream>
 #include <filesystem>
 #include <iostream>
+#include <numeric>
 #include <random>
 #include <string>
 #include <vector>
@@ -34,7 +35,7 @@ std::vector<std::string> load_resource(const std::string& path)
 	{
 		while (getline(resource, line))
 		{
-			lines.push_back(line);
+			lines.push_back(line + '\n');
 		}
 	}
 	else
@@ -43,18 +44,6 @@ std::vector<std::string> load_resource(const std::string& path)
 	}
 
 	return lines;
-}
-
-std::string join_vector(const std::vector<std::string>& vector)
-{
-	std::string joined{};
-
-	for (auto& line : vector)
-	{
-		joined += (line + '\n');
-	}
-
-	return joined;
 }
 
 struct Game
@@ -75,7 +64,7 @@ Game setup(std::string resource_path)
 		if (std::all_of(base.begin(), base.end(), ::isdigit))
 		{
 			auto frame = load_resource(file.path().string());
-			hangman.frames.push_back(join_vector(frame));
+			hangman.frames.push_back(std::accumulate(frame.begin(), frame.end(), std::string("")));
 		}
 	}
 

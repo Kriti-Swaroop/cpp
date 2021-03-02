@@ -23,5 +23,4 @@ struct Game
 };
 
 std::vector<std::string> load_resource(const std::string& path);
-std::string join_vector(const std::vector<std::string>& vector);
 Game setup(std::string resource_path);
