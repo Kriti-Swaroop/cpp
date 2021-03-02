@@ -27,4 +27,16 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources\9.txt" />
+    <Text Include="resources\8.txt" />
+    <Text Include="resources\7.txt" />
+    <Text Include="resources\0.txt" />
+    <Text Include="resources\1.txt" />
+    <Text Include="resources\2.txt" />
+    <Text Include="resources\3.txt" />
+    <Text Include="resources\4.txt" />
+    <Text Include="resources\5.txt" />
+    <Text Include="resources\6.txt" />
+  </ItemGroup>
 </Project>

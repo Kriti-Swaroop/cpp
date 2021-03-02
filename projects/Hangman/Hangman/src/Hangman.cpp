@@ -9,5 +9,9 @@
 int main()
 {
 	get_user_input<int>("Enter a number: ");
-	test();
+	
+	auto txt6 = load_resource("./resources/9.txt");
+	std::cout << join_vector(txt6);
+
+	std::cin.get();
 }
