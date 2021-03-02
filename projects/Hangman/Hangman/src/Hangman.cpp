@@ -8,10 +8,11 @@
 
 int main()
 {
+	// test setup procedure
 	get_user_input<int>("Enter a number: ");
 	
-	auto txt6 = load_resource("./resources/9.txt");
-	std::cout << join_vector(txt6);
+	auto hangman = setup("resources");
+	std::cout << hangman.word << '\n';
 
 	std::cin.get();
 }
