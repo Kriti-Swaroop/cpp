@@ -1,6 +1,6 @@
 #include <algorithm>
-#include <fstream>
 #include <filesystem>
+#include <fstream>
 #include <iostream>
 #include <numeric>
 #include <random>
@@ -18,7 +18,7 @@ std::vector<std::string> load_resource(const std::string& path)
 {
 	std::string line{};
 	std::vector<std::string> lines{};
-	std::ifstream resource{ path };
+	std::ifstream resource{path};
 
 	if (resource.good())
 	{

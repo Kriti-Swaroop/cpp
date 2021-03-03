@@ -8,8 +8,7 @@ template <typename T>
 T random_range(T min, T max)
 {
 	// in range of [min, max]
-	static std::default_random_engine eng{ std::random_device{}() };
-	
+	static std::default_random_engine eng{std::random_device{}()};
 	if constexpr (std::is_integral_v<T>)
 	{
 		std::uniform_int_distribution<T> dist(min, max);
