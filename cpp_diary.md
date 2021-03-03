@@ -10,9 +10,10 @@ I used for you to take a look at if you need more information.
 
 ## Table of Contents
 
-1. [Entry #1 (2021/02/28)](/log/entry1.md)
-2. [Entry #2 (2021/03/01)](/log/entry2.md)
-3. [Entry #3 (2021/03/02)](/log/entry3.md)
+1. [Entry #1 (2021/02/28)](/diary/entry1.md)
+2. [Entry #2 (2021/03/01)](/diary/entry2.md)
+3. [Entry #3 (2021/03/02)](/diary/entry3.md)
+4. [Entry #4 (2021/03/03)](/diary/entry4.md)
 
 ---
 
