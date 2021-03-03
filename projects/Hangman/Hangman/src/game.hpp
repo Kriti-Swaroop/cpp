@@ -2,17 +2,7 @@
 #include <string>
 #include <vector>
 
-int random_range(const int& min, const int& max);
-std::string random_choice(const std::vector<std::string>& vector);
 std::vector<char> split_string(const std::string& to_split);
-
-template <typename T> T get_user_input(std::string msg)
-{
-	std::cout << msg;
-	T input{};
-	std::cin >> input;
-	return input;
-}
 
 struct Game
 {

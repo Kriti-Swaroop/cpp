@@ -26,6 +26,9 @@
     <ClInclude Include="src\game.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\utils.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\9.txt" />
@@ -39,5 +42,8 @@
     <Text Include="resources\5.txt" />
     <Text Include="resources\6.txt" />
     <Text Include="resources\words.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".clang-format" />
   </ItemGroup>
 </Project>
