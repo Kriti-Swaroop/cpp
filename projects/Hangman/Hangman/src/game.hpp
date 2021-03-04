@@ -11,8 +11,10 @@ struct Game
 	std::string word{};
 	std::vector<char> letters{};
 	int life{};
+	std::vector<char> guessed{};
 };
 
 std::vector<std::string> load_resource(const std::string& path);
 Game setup(std::string resource_path);
+void print_splash_screen(std::string resource_path);
 void print_state(Game& hangman);

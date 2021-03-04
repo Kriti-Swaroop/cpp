@@ -42,5 +42,6 @@
     <Text Include="resources\5.txt" />
     <Text Include="resources\6.txt" />
     <Text Include="resources\words.txt" />
+    <Text Include="resources\splash.txt" />
   </ItemGroup>
 </Project>
