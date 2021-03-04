@@ -3,7 +3,7 @@
 #include <vector>
 
 std::vector<char> split_string(const std::string& to_split);
-void fill_vector(std::vector<char>& vector, int count, char fill);
+std::vector<char> fill_vector(int count, char fill);
 
 struct Game
 {
@@ -11,6 +11,7 @@ struct Game
 	std::string word{};
 	std::vector<char> letters{};
 	int life{};
+	std::size_t max_life{};
 	std::vector<char> guessed{};
 };
 

@@ -16,10 +16,10 @@ std::vector<char> split_string(const std::string& to_split)
 	return characters;
 }
 
-void fill_vector(std::vector<char>& vector, int count, char fill)
+std::vector<char> fill_vector(int count, char fill)
 {
 	std::vector<char> filled(count, fill);
-	vector = filled;
+	return filled;
 }
 
 std::vector<std::string> load_resource(const std::string& path)
@@ -73,7 +73,7 @@ Game setup(std::string resource_path)
 	hangman.letters = split_string(hangman.word);
 	hangman.life = hangman.frames.size() - 1;
 	hangman.max_life = hangman.life;
-	fill_vector(hangman.guessed, hangman.word.length(), '_');
+	hangman.guessed = fill_vector(hangman.word.length(), '_');
 
 	return hangman;
 }
@@ -96,7 +96,7 @@ void print_state(Game& hangman)
 	healthbar = healthbar.append(std::string(hangman.max_life - hangman.life, ' '));
 	std::cout << '\n'
 			  << '\t' << "Lifepoints: ["
-			  << "\033[31m" << healthbar << "\033[0m" << ']' << '\n';  // fg-color: red
+			  << "\033[31m" << healthbar << "\033[0m" << ']' << '\n'; // fg-color: red
 	std::cout << hangman.frames[hangman.frames.size() - 1 - hangman.life] << '\n';
 	std::cout << '\t';
 	for (auto& placeholder : hangman.guessed)
