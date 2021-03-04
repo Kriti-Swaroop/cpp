@@ -14,6 +14,12 @@ std::vector<char> split_string(const std::string& to_split)
 	return characters;
 }
 
+void fill_vector(std::vector<char>& vector, int count, char fill)
+{
+	std::vector<char> filled(count, fill);
+	vector = filled;
+}
+
 std::vector<std::string> load_resource(const std::string& path)
 {
 	std::string line{};
@@ -39,8 +45,9 @@ struct Game
 {
 	std::vector<std::string> frames{};
 	std::string word{};
-	std::vector<char> characters{};
+	std::vector<char> letters{};
 	std::size_t life{};
+	std::vector<char> guessed{};
 };
 
 Game setup(std::string resource_path)
@@ -60,8 +67,21 @@ Game setup(std::string resource_path)
 
 	auto all_words = load_resource(resource_path.append("/words.txt"));
 	hangman.word = random_choice<std::string>(all_words);
-	hangman.characters = split_string(hangman.word);
-	hangman.life = hangman.frames.size();
+	hangman.letters = split_string(hangman.word);
+	hangman.life = hangman.frames.size() - 1;
+	fill_vector(hangman.guessed, hangman.word.length(), '_');
 
 	return hangman;
+}
+
+void print_state(Game& hangman)
+{
+	std::string healthbar = std::string(hangman.life, '*');
+	std::cout << '\t' << "Lifepoints: ["
+			  << "\033[31m" << healthbar << "\033[0m" << ']' << '\n';
+	std::cout << hangman.frames[hangman.frames.size() - 1 - hangman.life] << '\n';
+	std::cout << '\t';
+	for (auto& placeholder : hangman.guessed)
+		std::cout << placeholder << " ";
+	std::cout << '\n' << '\n';
 }

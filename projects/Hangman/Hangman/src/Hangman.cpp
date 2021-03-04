@@ -9,11 +9,9 @@
 
 int main()
 {
-	// test setup procedure
-	get_user_input<int>("Enter a number: ");
-
 	auto hangman = setup("./resources");
-	std::cout << hangman.frames[9] << '\n';
+	print_state(hangman);
+	auto letter = get_user_input<char>("Enter a letter: ");
 
 	std::cin.get();
 }
