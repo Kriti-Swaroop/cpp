@@ -35,3 +35,5 @@ T get_user_input(std::string prompt)
 	std::cin >> input;
 	return input;
 }
+
+void clear_screen();

@@ -83,10 +83,13 @@ void print_splash_screen(std::string resource_path)
 	auto splash = load_resource(resource_path.append("/splash.txt"));
 	// fg-color: green
 	std::cout << '\n' << "\033[33m" << std::accumulate(splash.begin(), splash.end(), std::string("")) << "\033[0m" << '\n';
-	std::cout << '\t' << "ahvy sazl wny nrbbguz fo lvu oe davk sugpoj setkzdf";
-	std::this_thread::sleep_for(std::chrono::milliseconds(2000));
-	// clear screen
-	std::cout << "\033[2J\033[1;1H";
+	std::cout << '\t';
+	for (const auto& c : "ahvy sazl wny nrbbguz fo lvu oe davk sugpoj setkzdf")
+	{
+		std::cout << c;
+		std::this_thread::sleep_for(std::chrono::milliseconds(50));
+	}
+	clear_screen();
 }
 
 void print_state(Game& hangman)
