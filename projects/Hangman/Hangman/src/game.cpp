@@ -16,6 +16,11 @@ std::vector<char> split_string(const std::string& to_split)
 	return characters;
 }
 
+void strip_char(std::string& word, const char& escape_sequence)
+{
+	word.erase(remove(word.begin(), word.end(), escape_sequence), word.end());
+}
+
 std::vector<char> fill_vector(int count, char fill)
 {
 	std::vector<char> filled(count, fill);
@@ -69,7 +74,14 @@ Game setup(std::string resource_path)
 	}
 
 	auto all_words = load_resource(resource_path.append("/words.txt"));
-	hangman.word = random_choice<std::string>(all_words);
+
+	// load_resource adds '\t' and '\n' to lines of strings
+	// for formatting, so we need to remove them first
+	auto random_word = random_choice<std::string>(all_words);
+	strip_char(random_word, '\t');
+	strip_char(random_word, '\n');
+
+	hangman.word = random_word;
 	hangman.letters = split_string(hangman.word);
 	hangman.life = hangman.frames.size() - 1;
 	hangman.max_life = hangman.life;
@@ -105,4 +117,32 @@ void print_state(Game& hangman)
 	for (auto& placeholder : hangman.guessed)
 		std::cout << "\033[33m" << placeholder << "\033[0m ";
 	std::cout << std::string(2, '\n');
+}
+
+void print_end_msg(Game& hangman)
+{
+	if (hangman.life == 0)
+	{
+		std::cout << "\033[31m";
+
+		for (const auto& c : "you lost :(")
+		{
+			std::cout << c;
+			std::this_thread::sleep_for(std::chrono::milliseconds(100));
+		}
+
+		std::cout << "\033[0m";
+	}
+	else
+	{
+		std::cout << "\033[33m";
+
+		for (const auto& c : "you won :)")
+		{
+			std::cout << c;
+			std::this_thread::sleep_for(std::chrono::milliseconds(100));
+		}
+
+		std::cout << "\033[0m";	
+	}
 }
