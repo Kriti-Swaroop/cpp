@@ -1,3 +1,0 @@
-C:/Users/Stefan Greve/Desktop/GitHub/cpp/projects/Guess/out/build/x64-Debug (default)/CMakeFiles/Guess.dir
-C:/Users/Stefan Greve/Desktop/GitHub/cpp/projects/Guess/out/build/x64-Debug (default)/CMakeFiles/edit_cache.dir
-C:/Users/Stefan Greve/Desktop/GitHub/cpp/projects/Guess/out/build/x64-Debug (default)/CMakeFiles/rebuild_cache.dir

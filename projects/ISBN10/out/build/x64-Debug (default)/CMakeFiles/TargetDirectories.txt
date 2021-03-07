@@ -1,3 +1,0 @@
-C:/Users/Stefan Greve/Desktop/GitHub/cpp/projects/ISBN10/out/build/x64-Debug (default)/CMakeFiles/edit_cache.dir
-C:/Users/Stefan Greve/Desktop/GitHub/cpp/projects/ISBN10/out/build/x64-Debug (default)/CMakeFiles/ISBN10.dir
-C:/Users/Stefan Greve/Desktop/GitHub/cpp/projects/ISBN10/out/build/x64-Debug (default)/CMakeFiles/rebuild_cache.dir
