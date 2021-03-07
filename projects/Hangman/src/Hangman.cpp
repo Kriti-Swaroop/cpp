@@ -12,8 +12,8 @@
 
 int main()
 {
-	std::string resource_path = "./resources";
-	auto hangman = setup(resource_path);
+	std::string resource_path = "../../../resources";
+	Game hangman = setup(resource_path);
 	print_splash_screen(resource_path);
 
 	bool playing = hangman.life > 0;
