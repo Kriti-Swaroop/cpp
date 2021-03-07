@@ -9,7 +9,7 @@
 
 int random_integer(int min, int max)
 {
-    // random_integer in [min, max]
+    // in range of [min, max]
     static std::default_random_engine eng{ std::random_device{}() };
     std::uniform_int_distribution<int> dist(min, max);
     return dist(eng);
@@ -37,15 +37,13 @@ void find_unknown_integer(int unknown, int min, int max, int guess)
 
 int main()
 {
-    int unknown;
+    int unknown{};
     int min = 0;
     int max = 100;
 
     std::cout << "Enter an integer between " << min << " and " << max << ": ";
     std::cin >> unknown;
     
-    // enter the game
-    int initial_guess = random_integer(min, max);
-    find_unknown_integer(unknown, min, max, initial_guess);
+    find_unknown_integer(unknown, min, max, random_integer(min, max));
     return 0;
 }
