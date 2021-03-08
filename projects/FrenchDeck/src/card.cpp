@@ -1,0 +1,6 @@
+#include <string>
+
+struct Card
+{
+
+};

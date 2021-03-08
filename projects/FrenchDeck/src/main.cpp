@@ -4,12 +4,10 @@
  */
 
 #include <iostream>
-#include "card.h"
+#include "card.hpp"
 
 int main()
 {
-    Card test_card = Card::Card(1, Color::Red, Suit::Heart);
-    std::cout << test_card.to_string() << '\n';
-    std::cout << static_cast<int>(Color::Black) << '\n';
+    std::cout << "Hello, World!" << '\n';
     return 0;
 }

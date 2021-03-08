@@ -1,0 +1,13 @@
+﻿cmake_minimum_required(VERSION 3.18 FATAL_ERROR)
+
+set(CMAKE_BUILD_TYPE "Debug" CACHE STRING "")
+set(APP_VERSION "1.0.0" CACHE STRING "Application Version" FORCE)
+project(FrenchDeck VERSION ${APP_VERSION})
+
+file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.*pp")
+add_executable(${PROJECT_NAME} ${SOURCES})
+
+if(W_MSBUILD)
+	set_property(DIRECTORY ${CMAKE_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${PROJECT_NAME})
+endif()
+
