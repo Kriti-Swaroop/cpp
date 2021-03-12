@@ -13,7 +13,7 @@ std::cout << 3.4;           // 3.4 is a double literal
 - If the default type of a literal is not as desired, you can change the type of
   a literal by adding a suffix:
 
-| Data Type | Suffix     | Meaning                                                           |
+| Data Type | Suffix                                                    | Meaning            |
 |-----------|-----------------------------------------------------------|--------------------|
 | int       | `u` or `U`                                                | unsigned int       |
 | int       | `I` or `L`                                                | long               |
