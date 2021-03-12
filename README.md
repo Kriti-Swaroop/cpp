@@ -13,8 +13,11 @@ beginner-friendly project ideas feel free to follow along.
 
 Find below a list of projects I added to this repository in chronology order:
 
+### Difficulty: Very Easy
+
 1. **Guess** is *Guess the Number* but the user enters a number and lets the computer
 guess the number `tags = [cli, random, conditions, recursive function]`
 2. **ISBN10** is a project for validating ISBN-10 checksums `tag=[string manipulation, vector, conversion]`
 3. **FrenchDeck** is a case study of OOP in C++ `tags=[oop, structs, std]`
 4. **Hangman** is  a CLI game `tags=[i/o, cli, random, game]`
+5. **Apple** is the solution to practice exercise 4 of www.learncpp.com `tags=[while,double]`
