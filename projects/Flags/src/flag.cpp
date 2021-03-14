@@ -5,7 +5,7 @@
 // The relevant rows are encompass by '> <', the other rows
 // are there for the sake for completeness.
 
-bool test(std::uint_fast32_t& number, const Flags& flag)
+bool test(std::uint32_t& number, const Flags& flag)
 {
 	/*
 	 * |---|---|-----| EXPLANATION: returns 'W'
@@ -20,7 +20,7 @@ bool test(std::uint_fast32_t& number, const Flags& flag)
 	return (number & flag);
 }
 
-void set(std::uint_fast32_t& number, const Flags& flag)
+void set(std::uint32_t& number, const Flags& flag)
 {
 	/*
 	 * |---|---|-----| EXPLANATION: returns 'W'
@@ -36,7 +36,7 @@ void set(std::uint_fast32_t& number, const Flags& flag)
 	number |= flag;
 }
 
-void reset(std::uint_fast32_t& number, const Flags& flag)
+void reset(std::uint32_t& number, const Flags& flag)
 {
 	/*
 	 * |---|---|------| EXPLANATION: Here, &=~
@@ -52,7 +52,7 @@ void reset(std::uint_fast32_t& number, const Flags& flag)
 	number &= ~flag;
 }
 
-void flip(std::uint_fast32_t& number, const Flags& flag)
+void flip(std::uint32_t& number, const Flags& flag)
 {
 	/*
 	 * |---|---|------| EXPLANATION: Here, ^

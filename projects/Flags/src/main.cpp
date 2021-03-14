@@ -13,9 +13,11 @@ int main()
 	 *                   1 111    1   7
 	 *                   7 654    0
 	 */
-	std::uint_fast32_t foo{ 123456 };
+	std::uint32_t foo{ 123456 };
 	
-#pragma region Testing All Flag Methods
+#pragma region Testing "flag.cpp"
+
+	std::cout << '\n' << "Testing 'flag.cpp'" << '\n';
 
 	std::cout << "Using number " << foo << '\t' << std::bitset<32>(foo) << '\n' << '\n';
 
@@ -24,7 +26,7 @@ int main()
 	std::cout << std::string(20, '-') << '\n';
 	std::cout << test(foo, Flags::flag1) << '\t' << "(foo=" << foo << ')' << '\n' << '\n';
 	
-	// 1	(foo=1234567)
+	// 1	(foo=123457)
 	std::cout << "Set flag1" << '\n';
 	std::cout << std::string(20, '-') << '\n';
 	set(foo, Flags::flag1);
@@ -36,7 +38,7 @@ int main()
 	reset(foo, Flags::flag1);
 	std::cout << test(foo, Flags::flag1) << '\t' << "(foo=" << foo << ')' << '\n' << '\n';
 
-	// 1	(foo=1234567)
+	// 1	(foo=123457)
 	std::cout << "Flip flag1" << '\n';
 	std::cout << std::string(20, '-') << '\n';
 	flip(foo, Flags::flag1);

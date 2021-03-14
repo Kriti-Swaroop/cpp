@@ -42,7 +42,7 @@ enum Flags
 	flag31 = 1 << 30	// bit 31
 };
 
-bool test(std::uint_fast32_t& number, const Flags& flag);
-void set(std::uint_fast32_t& number, const Flags& flag);
-void reset(std::uint_fast32_t& number, const Flags& flag);
-void flip(std::uint_fast32_t& number, const Flags& flag);
+bool test(std::uint32_t& number, const Flags& flag);
+void set(std::uint32_t& number, const Flags& flag);
+void reset(std::uint32_t& number, const Flags& flag);
+void flip(std::uint32_t& number, const Flags& flag);
