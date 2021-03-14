@@ -20,4 +20,5 @@ guess the number `tags = [cli, random, conditions, recursive function]`
 2. **ISBN10** is a project for validating ISBN-10 checksums `tag=[string manipulation, vector, conversion]`
 3. **FrenchDeck** is a case study of OOP in C++ `tags=[oop, structs, std]`
 4. **Hangman** is  a CLI game `tags=[i/o, cli, random, game]`
-5. **Apple** is the solution to practice exercise 4 of www.learncpp.com `tags=[while,double]`
+5. **Apple** is the solution to practice exercise 4 of <www.learncpp.com> `tags=[while,double]`
+6. **Flags** is a low-level look at `enums` `tags=[enum,bit]`
