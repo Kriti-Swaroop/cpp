@@ -17,12 +17,12 @@ constexpr std::array<char, 13> VALUES = {
 	'K'  // king
 };
 
-constexpr std::array<int, 2> COLORS = { 
+constexpr std::array<char, 2> COLORS = { 
 	'R', // red
 	'B'  // black
 };
 
-constexpr std::array<int, 4> SUITES = {
+constexpr std::array<char, 4> SUITES = {
 	'C', // clover
 	'H', // heart	
 	'P', // pike
