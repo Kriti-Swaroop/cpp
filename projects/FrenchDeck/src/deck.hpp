@@ -8,6 +8,6 @@ struct Deck
 	std::vector<Card> cards{};
 	Deck();
 	void shuffle();
-	void draw();
+	Card draw();
 	void print();
 };

@@ -23,7 +23,7 @@ int main()
 
     std::cout << '\n' << "You drawed:" << '\n';
     std::cout << std::string(41, '-') << '\n';
-    fd.draw();
+    fd.draw().print();
 
     std::cin.get();
     return 0;

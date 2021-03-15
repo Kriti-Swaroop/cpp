@@ -11,11 +11,11 @@
 
 Deck::Deck()
 {
-	for (int suite = 1; suite <= 4; ++suite)
+	for (int suite = 0; suite <= 3; ++suite)
 	{	
-		int color = (suite % 2 == 0) ? 1 : 2;
+		int color = (suite % 2 == 0) ? 0 : 1;
 
-		for (int value = 1; value <= 13; ++value)
+		for (int value = 0; value <= 12; ++value)
 		{
 			this->cards.push_back(Card(value, color, suite));
 		}
@@ -29,14 +29,15 @@ void Deck::shuffle()
 	std::shuffle(this->cards.begin(), this->cards.end(), rng);
 }
 
-void Deck::draw()
+Card Deck::draw()
 {
-	Card draw_card = random_choice<Card>(this->cards);
-	draw_card.print();
+	Card last_card = this->cards.back();
+	this->cards.pop_back();
+	return last_card;
 }
 
 void Deck::print()
 {
-	for (Card card : this->cards)
+	for (Card& card : this->cards)
 		card.print();
 }

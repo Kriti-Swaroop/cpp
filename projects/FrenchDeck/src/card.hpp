@@ -1,32 +1,32 @@
 #pragma once
-#include <map>
+#include <array>
 
-const std::map<int, char> VALUES = {
-	{1, '1'},
-	{2, '2'},
-	{3, '3'},
-	{4, '4'},
-	{5, '5'},
-	{6, '6'},
-	{7, '7'},
-	{8, '8'},
-	{9, '9'},
-	{10, 'T'}, // ten
-	{11, 'J'}, // jack
-	{12, 'Q'}, // queen
-	{13, 'K'}, // king
+constexpr std::array<char, 13> VALUES = {
+	'0',
+	'1',
+	'2',
+	'3',
+	'4',
+	'5',
+	'6',
+	'7',
+	'8',
+	'9',
+	'J', // jack
+	'Q', // queen
+	'K'  // king
 };
 
-const std::map<int, char> COLORS = {
-	{1, 'R'},
-	{2, 'B'}
+constexpr std::array<int, 2> COLORS = { 
+	'R', // red
+	'B'  // black
 };
 
-const std::map<int, char> SUITES = {
-	{1, 'H'}, // heart
-	{2, 'T'}, // tile
-	{3, 'C'}, // clover
-	{4, 'P'}  // pike
+constexpr std::array<int, 4> SUITES = {
+	'C', // clover
+	'H', // heart	
+	'P', // pike
+	'T'  // tile
 };
 
 struct Card
