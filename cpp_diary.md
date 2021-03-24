@@ -17,7 +17,8 @@ I used for you to take a look at if you need more information.
 5. [Entry #5 (2021/03/04)](/diary/entry5.md)
 6. [Entry #6 (2021/03/12)](/diary/entry6.md)
 7. [Entry #7 (2021/03/13)](/diary/entry7.md)
-8. [Entry #8 (2021/03/14)](/diary/entry8.md)
+8. [Entry #8 (2021/03/23)](/diary/entry8.md)
+9. [Entry #9 (2021/03/24)](/diary/entry9.md)
 
 ---
 
